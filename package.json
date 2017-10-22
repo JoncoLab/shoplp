@@ -1,0 +1,37 @@
+{
+  "name": "shoplp",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "firebase": "^4.6.0",
+    "jquery": "^3.2.1",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.14"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "ready": "npm run build && firebase deploy && npm start",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "description": "clothes shop landing page",
+  "main": "build/index.html",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoncoLab/shoplp.git"
+  },
+  "author": "JoncoLab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoncoLab/shoplp/issues"
+  },
+  "homepage": "https://github.com/JoncoLab/shoplp#readme"
+}
