@@ -1,0 +1,23 @@
+@import './varibles.scss';
+body,
+html {
+  @include mainReset;
+  @include noScroll;
+}
+
+html {
+  body {
+
+    h1, h2, h3 {
+      @include captionReset;
+    }
+
+    #root {
+
+      .App {
+        @import './header.scss';
+        @import './products.scss';
+      }
+    }
+  }
+}
